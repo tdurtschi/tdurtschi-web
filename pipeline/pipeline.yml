@@ -1,0 +1,20 @@
+---
+resources:
+- name: resource-tdurtschi-web
+  type: git
+  source: 
+    uri: https://github.com/tdurtschi/tdurtschi-web.git
+    branch: master
+
+jobs:
+- name: ftp-deploy
+  public: true
+  plan:
+    - get: resource-tdurtschi-web
+      trigger: true
+    - task: ftp-deploy
+      file: resource-tdurtschi-web/pipeline/task_deploy.yml
+      params:
+        FTP_URL: ((ftp_url))
+        FTP_USER: ((ftp_user))
+        FTP_PASS: ((ftp_pass))
