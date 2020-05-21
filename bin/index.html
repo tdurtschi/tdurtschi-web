@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tdurtschi.com</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111893401-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-111893401-1"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag("js", new Date())
 
-        gtag('config', 'UA-111893401-1');
+      gtag("config", "UA-111893401-1")
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <link href="index.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="/Scripts/util.js"></script>
     <script type="text/javascript" src="/Scripts/Environment.js"></script>
     <script type="text/javascript" src="/Scripts/Bug.js"></script>
     <script type="text/javascript" src="/Scripts/Grass.js"></script>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div id="header">
-        <a href="/" id="logo-text">tdurtschi.com</a>
-        <a class="link" href="about.html">About</a>
+      <a href="/" id="logo-text">tdurtschi.com</a>
+      <a class="link" href="about.html">About</a>
     </div>
     <div class="container body-content">
-        <div id="earth"></div>
+      <div id="earth"></div>
 
-
-        <canvas id="canvas-nature">
-        </canvas>
-        <script type="text/javascript" src="/Scripts/nature.js"></script>
+      <canvas id="canvas-nature"> </canvas>
+      <script type="text/javascript" src="/Scripts/nature.js"></script>
     </div>
     <footer class="noselect">
-        <p>
-            Last updated May 2020 <br />
-            <a onclick="addBug()" href="#">Add Bug</a>
-        </p>
+      <p>
+        Last updated May 2020 <br />
+        <a onclick="addBug()" href="#">Add Bug</a>
+        <span>|</span>
+        <a href="/bug">New Bug</a>
+      </p>
     </footer>
-</body>
-
+  </body>
 </html>
