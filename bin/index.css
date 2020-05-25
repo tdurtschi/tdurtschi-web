@@ -12,6 +12,11 @@ footer p{
     bottom:53px;
     font-size:12pt;
     text-align:left;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 7px 8px rgba(244, 247, 249, 1);
+    -moz-box-shadow: 0px 0px 7px 8px rgba(244, 247, 249, 1);
+    box-shadow: 0px 0px 7px 8px rgba(244, 247, 249, 1);
+    background-color: #f4f7f9;
 }
 
 
