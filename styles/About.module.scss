@@ -1,0 +1,16 @@
+
+.about {
+    width:100%;
+    padding: 8px 16px;
+}
+.about table {
+    display: block;
+    width: 100%;
+}
+.about td {
+    padding: 10px 5px;
+    word-wrap: break-word;
+}
+.about td:first-child {
+    text-align: right;
+}
