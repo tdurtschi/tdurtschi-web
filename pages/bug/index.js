@@ -1,6 +1,6 @@
 
 import { useEffect } from 'react'
-import Footer from "../../components/footer"
+import Footer from "../../components/footer/footer"
 import styles from '../../styles/Bug.module.scss'
 import useScript from '../../helpers/useScript'
 

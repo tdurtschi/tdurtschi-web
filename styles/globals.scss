@@ -9,12 +9,11 @@ body {
 a {
   color: #0a6868;
   text-decoration: none;
-}
 
-a:hover {
-  color: #1fc3c3;
+  &:hover {
+    color: #1fc3c3;
+  }
 }
-
 
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */

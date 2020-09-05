@@ -1,6 +1,6 @@
 import '../styles/globals.scss'
 import Head from 'next/head'
-import Header from "../components/header"
+import Header from "../components/header/header"
 
 function MyApp({ Component, pageProps }) {
     return (
