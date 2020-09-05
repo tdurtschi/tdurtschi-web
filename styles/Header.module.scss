@@ -1,20 +1,11 @@
 .header {
-    display: flex;
-    padding: 8px 16px;
-    color: #085050;
-    align-items: flex-end;
-    border-bottom: 1px solid #085050;
-  }
+  display: flex;
+  color: #085050;
+  align-items: flex-end;
+  border-bottom: 1px solid #085050;
   
-  .header .link {
+  .link {
     font-size: 20px;
+    padding: 8px 16px;
   }
-  
-  
-  .logo-text {
-    display: block;
-    font-weight: bold;
-    font-size: 24px;
-    margin-right: 48px;
-  }
-  
+}

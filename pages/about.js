@@ -7,7 +7,8 @@ export default function About() {
         <>
             <div className={styles.about}>
                 <h2>About This Site</h2>
-                <p>This is the personal website for Teagan Durtschi, software engineer. This website is built with Next.js. Its also is open source: <a href={githubUrl}>check it out!</a></p>
+                <p>This is the personal website for Teagan Durtschi, software engineer. This website is built with Next.js.</p>
+                <p><a href={githubUrl}>It's open source!</a></p>
                 <h2>Contact</h2>
                 <table>
                     <tbody>
