@@ -10,4 +10,4 @@ inputs:
 
 run:
   path: sh
-  args: ["resource-tdurtschi-web/pipeline/deploy.sh"]
+  args: ["resource-tdurtschi-web/deployment/deploy.sh"]

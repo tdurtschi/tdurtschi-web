@@ -13,7 +13,7 @@ jobs:
     - get: resource-tdurtschi-web
       trigger: true
     - task: ftp-deploy
-      file: resource-tdurtschi-web/pipeline/task_deploy.yml
+      file: resource-tdurtschi-web/deployment/task_deploy.yml
       params:
         FTP_URL: ((ftp_url))
         FTP_USER: ((ftp_user))

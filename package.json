@@ -10,7 +10,8 @@
     "compile": "next build",
     "build": "npm-run-all compile export",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "deploy": "./deployment/deploy-docker.sh"
   },
   "author": "",
   "license": "ISC",
