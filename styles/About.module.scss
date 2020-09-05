@@ -1,16 +1,15 @@
-
 .about {
+    box-sizing: border-box;
     width:100%;
     padding: 8px 16px;
+
+    p {
+        word-wrap: break-word;
+    }
 }
-.about table {
-    display: block;
-    width: 100%;
-}
-.about td {
-    padding: 10px 5px;
-    word-wrap: break-word;
-}
-.about td:first-child {
-    text-align: right;
+
+.contact {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

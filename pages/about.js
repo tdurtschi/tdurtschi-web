@@ -7,47 +7,22 @@ export default function About() {
         <>
             <div className={styles.about}>
                 <h2>About This Site</h2>
-                <p>This is the personal website for Teagan Durtschi, software engineer. This website is built with Next.js.</p>
+                <p>This is the personal website for Teagan Durtschi, software engineer. </p>
+                <p>This website is built with Next.js.</p>
                 <p><a href={githubUrl}>It's open source!</a></p>
-                <h2>Contact</h2>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <strong>Email:</strong>
-                            </td>
-                            <td>
-                                <a href="mailto:teagan@teaganmatthewdurtschi.com">teagan@tdurtschi.com</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <strong>LinkedIn:</strong>
-                            </td>
-                            <td>
-                                <a
-                                    href="https://www.linkedin.com/in/teagandurtschi/">https://www.linkedin.com/in/teagandurtschi/</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <strong>GitHub:</strong>
-                            </td>
-                            <td>
-                                <a href="https://github.com/tdurtschi">https://github.com/tdurtschi</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <strong>StackOverflow:</strong>
-                            </td>
-                            <td>
-                                <a
-                                    href="https://stackoverflow.com/users/story/5099555">https://stackoverflow.com/users/story/5099555</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <h2>Contact Info</h2>
+                <p class={styles.contact}>
+                    <strong>Email: </strong>
+                    <a href="mailto:teagan@teaganmatthewdurtschi.com">teagan@tdurtschi.com</a>
+                </p>
+                <p class={styles.contact}>
+                    <strong>GitHub: </strong>
+                    <a href="https://github.com/tdurtschi">https://github.com/tdurtschi</a>
+                </p>
+                <p class={styles.contact}>
+                    <strong>LinkedIn: </strong>
+                    <a href="https://www.linkedin.com/in/teagandurtschi/">https://www.linkedin.com/in/teagandurtschi/</a>
+                </p>
             </div>
             <Footer>
                 <p>
