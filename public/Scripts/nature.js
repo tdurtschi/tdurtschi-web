@@ -23,9 +23,11 @@ setTimeout(function () {
 }, 500);
 
 function draw() {
-    var ctx = get2dCanvasContext(document, "canvas-nature");
-    ctx.clearRect(0, 0, env.canvas.width, env.canvas.height);
-    env.objects.forEach(function(entity){entity.render();});
+    if (!window.PAUSE) {
+        var ctx = get2dCanvasContext(document, "canvas-nature");
+        ctx.clearRect(0, 0, env.canvas.width, env.canvas.height);
+        env.objects.forEach(function (entity) { entity.render(); });
+    }
 
     window.requestAnimationFrame(draw);
 }

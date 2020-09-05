@@ -5,12 +5,24 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "express": "nodemon index.js",
+    "dev": "next dev",
+    "compile": "next build",
+    "build": "npm-run-all compile export",
+    "start": "next start",
+    "export": "next export"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "nodemon": "^2.0.3"
+    "next": "9.5.2",
+    "nodemon": "^2.0.3",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5"
   }
 }
