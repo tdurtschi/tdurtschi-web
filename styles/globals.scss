@@ -15,6 +15,21 @@ a {
   }
 }
 
+.link {
+  font-size: 16px;
+  font-family: "IBM Plex Mono", monospace;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #0a6868;
+  text-decoration: none;
+
+  &:hover {
+    color: #1fc3c3;
+  }
+}
+
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -23,4 +38,14 @@ a {
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
+}
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px 16px;
+
+  p {
+    word-wrap: break-word;
+  }
 }

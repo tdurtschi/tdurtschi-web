@@ -1,0 +1,10 @@
+.post-header {
+    display: flex;
+    align-items: center;
+    flex-basis: 100%;
+
+    .post-title, .post-date {
+        font-size: 16px;
+        padding: 0 16px 0 0;
+    }
+}

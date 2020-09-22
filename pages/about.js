@@ -5,7 +5,7 @@ const githubUrl = "https://github.com/tdurtschi/tdurtschi-web"
 export default function About() {
     return (
         <>
-            <div className={styles.about}>
+            <div className="container">
                 <h2>About This Site</h2>
                 <p>This is the personal website for Teagan Durtschi, software engineer. </p>
                 <p>This website is built with Next.js.</p>

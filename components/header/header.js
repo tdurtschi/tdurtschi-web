@@ -8,6 +8,9 @@ export default function Header() {
             <Link href="/about" as="/about.html">
                 <a className={styles["link"]} >about</a>
             </Link>
+            <Link href="/blog" as="/blog.html">
+                <a className={styles["link"]} >blog</a>
+            </Link>
         </div >
     )
 }

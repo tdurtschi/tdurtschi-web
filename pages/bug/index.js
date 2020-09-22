@@ -2,26 +2,22 @@
 import { useEffect } from 'react'
 import Footer from "../../components/footer/footer"
 import styles from '../../styles/Bug.module.scss'
-import useScript from '../../helpers/useScript'
 
 export default function Bug() {
-    useScript("/bugjs.bundle.js", "bundle");
-
     useEffect(() => {
-        document.getElementById("bundle").addEventListener("load", () => {
-            window.b = Game("#root");
-            b.game.start();
+        const { Game } = require("@tdurtschi/bug");
+        window.b = Game("#root");
+        b.game.start();
 
-            window.addBug = function () {
-                var bug = b.bugFactory.build();
-                b.game.addEntity(bug);
-            }
+        window.addBug = function () {
+            var bug = b.bugFactory.build();
+            b.game.addEntity(bug);
+        }
 
-            window.addPlant = function () {
-                var plant = b.plantFactory.build();
-                b.game.addEntity(plant);
-            }
-        })
+        window.addPlant = function () {
+            var plant = b.plantFactory.build();
+            b.game.addEntity(plant);
+        }
     }, [])
 
     return (
