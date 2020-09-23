@@ -1,9 +1,13 @@
-#!/bin/bash
-set -x
+#! /bin/bash
+set -x -e
 
-# set working directory to project root
-parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
-cd "$parent_path"
-cd ..
+PROJECT_ROOT="$( cd "$(dirname "${BASH_SOURCE[0]}")" ; cd .. ; pwd -P )"
+PROJECT_TARGET_DIR="/resource-tdurtschi-web"
 
-docker run -it -v $(pwd):/resource-tdurtschi-web frolvlad/alpine-bash /bin/bash /resource-tdurtschi-web/deployment/deploy.sh
+run_deploy_from_docker() {
+    docker run -it -v $PROJECT_ROOT:$PROJECT_TARGET_DIR \
+        frolvlad/alpine-bash \
+        /bin/bash $PROJECT_TARGET_DIR/deployment/deploy.sh
+}
+
+run_deploy_from_docker

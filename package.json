@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -rf out/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "express": "nodemon index.js",
     "dev": "next dev",
     "compile": "next build",
-    "build": "npm-run-all compile export",
+    "build": "npm-run-all clean compile export",
     "start": "next start",
     "export": "next export",
     "deploy": "./deployment/deploy-docker.sh"
