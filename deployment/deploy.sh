@@ -20,7 +20,7 @@ do_static_upload() {
 main() {
     install_dependencies
     setup_environment
-    # do_static_upload
+    do_static_upload
 
     echo "Success!"
 }
