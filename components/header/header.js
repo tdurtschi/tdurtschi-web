@@ -2,6 +2,7 @@ import styles from './Header.module.scss'
 import Link from "next/link"
 import { useState } from 'react'
 import HamburgerMenu from 'react-hamburger-menu'
+
 export default function Header() {
     const links = [
         {
@@ -20,14 +21,20 @@ export default function Header() {
         <header className={styles.header}>
             <a href="/" className={styles["link"]}>tdurtschi.com</a>
             <div className={styles["desktop-links"]}>
-                {links.map(DesktopLink)}
+                {links.map((link, idx) => <DesktopLink {...link} key={idx} />)}
             </div>
             <HamburgerNav links={links} />
         </header >
     )
 }
 
-const HamburgerNav = function (props) {
+const DesktopLink = (props) =>
+    <Link href={props.href} as={props.as}>
+        <a className={styles["link"]} >{props.linkText}</a>
+    </Link>
+
+const HamburgerNav = (props) => {
+
     const [isOpen, setIsOpen] = useState(false);
 
     const handleClick = function () {
@@ -52,17 +59,12 @@ const HamburgerNav = function (props) {
                 />
                 {isOpen &&
                     <div className={multi(styles['mobile-links-container'], 'test')}>
-                        {props.links.map((link) => <MobileLink link={link} handleClick={handleClick} />)}
+                        {props.links.map((link, idx) => <MobileLink link={link} handleClick={handleClick} key={idx} />)}
                     </div>}
             </div>
         </>
     )
 }
-
-const DesktopLink = (props) =>
-    <Link href={props.href} as={props.as}>
-        <a className={styles["link"]} >{props.linkText}</a>
-    </Link>
 
 const MobileLink = (props) =>
     <Link href={props.link.href} as={props.link.as}>
