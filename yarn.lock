@@ -1098,14 +1098,13 @@
     defer-to-connect "^1.0.1"
 
 "@tdurtschi/bug@^1.0.0":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@tdurtschi/bug/-/bug-1.0.1.tgz#456eaee2408ebd90c04a2ec850d0bdfa90650354"
-  integrity sha512-dns1o271czy6dDf/LgQI2sVGibmiJda5hlO0+ofGpfxTrkcmeVwnP5Dp4aJoZipaOyywTAOy3gAPsURk21+kdQ==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@tdurtschi/bug/-/bug-1.0.2.tgz#aa5449ea4f3901f041dfbbb43a928f509436a89f"
+  integrity sha512-RdPCdS8U82kL6nHAe8uzIQkGtlLueRT4CDFun1wAWFi4bYlvDojWiej0BgiRIt3QqaTDCkvVOSUwJBm5erYTng==
   dependencies:
     "@testing-library/react" "^8.0.7"
     "@types/jasmine" "^3.3.13"
     "@types/victor" "^1.1.0"
-    express "^4.17.1"
     file-loader "^4.1.0"
     jasmine "^3.4.0"
     jsdom "^15.1.1"
@@ -1202,9 +1201,9 @@
   integrity sha512-FA/BWv8t8ZWJ+gEOnLLd8ygxH/2UFbAvgEonyfN6yWGLKc7zVjbpl2Y4CTjid9h2RfgPP6SEt6uHwEOply00yw==
 
 "@types/yargs@^13.0.0":
-  version "13.0.10"
-  resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-13.0.10.tgz#e77bf3fc73c781d48c2eb541f87c453e321e5f4b"
-  integrity sha512-MU10TSgzNABgdzKvQVW1nuuT+sgBMWeXNc3XOs5YXV5SDAK+PPja2eUuBNB9iqElu03xyEDqlnGw0jgl4nbqGQ==
+  version "13.0.11"
+  resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-13.0.11.tgz#def2f0c93e4bdf2c61d7e34899b17e34be28d3b1"
+  integrity sha512-NRqD6T4gktUrDi1o1wLH3EKC1o2caCr7/wR87ODcbVITQF106OM3sFN92ysZ++wqelOd1CTzatnOBRDYYG6wGQ==
   dependencies:
     "@types/yargs-parser" "*"
 
@@ -5881,6 +5880,11 @@ react-dom@16.13.1, react-dom@^16.8.6:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.19.1"
+
+react-hamburger-menu@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-hamburger-menu/-/react-hamburger-menu-1.2.1.tgz#bcaca08bf7d1ae96aa97553828765dce8f912eeb"
+  integrity sha512-It5Jque8bx9lYn8q/NFtu9Ci20fBMsyunFSp06ZGgWXbMZlTFrN0IxKguGZ0igYQr6RvJ3S9CN3rTjrObmq/Cw==
 
 react-is@16.13.1, react-is@^16.8.1, react-is@^16.8.4:
   version "16.13.1"
