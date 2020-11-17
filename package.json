@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "uat": "npm-run-all build express",
     "clean": "rm -rf out/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "express": "nodemon index.js",
