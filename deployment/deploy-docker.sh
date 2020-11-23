@@ -10,4 +10,7 @@ run_deploy_from_docker() {
         /bin/bash $PROJECT_TARGET_DIR/deployment/deploy.sh
 }
 
+cd $PROJECT_ROOT
+yarn build
+yarn cypress
 run_deploy_from_docker

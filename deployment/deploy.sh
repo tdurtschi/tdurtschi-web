@@ -11,10 +11,9 @@ setup_environment() {
 }
 
 do_static_upload() {
-    TARGET_DIR="/tdurtschi.com"
     STATIC_ROOT="resource-tdurtschi-web/out/*"
 
-    ncftpput -R -v -u $FTP_USER -p $FTP_PASS $FTP_URL $TARGET_DIR $STATIC_ROOT
+    ncftpput -R -v -u $FTP_USER -p $FTP_PASS $FTP_URL $FTP_TARGET_DIRECTORY $STATIC_ROOT
 }
 
 main() {

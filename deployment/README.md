@@ -1,8 +1,10 @@
-How to deploy:
+# Deploying tdurtschi-web
+
+This deploy script assumes the target is a folder on a remote ftp server.
 
 Requirements:
-    * Run `yarn build` to create assets
-    * `deployment/deploy.env` file to export FTP info as environment variables
-    * Docker
+    * `deployment/deploy.env` file for environment config (see `deploy.env.sample`)
+    * Docker is installed and running
 
-Run `deployment/deploy-docker.sh`. This will run the deployment script inside a docker container.
+Instructions for deploy:
+    * Run `deployment/deploy-docker.sh`. This will run the deployment script inside a docker container.
