@@ -14,7 +14,7 @@
     "start": "next start",
     "export": "next export",
     "deploy": "./deployment/deploy-docker.sh",
-    "cypress": "cypress",
+    "cypress": "cypress run",
     "cypress:open": "cypress open"
   },
   "author": "",
