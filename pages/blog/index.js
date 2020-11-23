@@ -9,7 +9,7 @@ export default function Blog(props) {
                     {props.allPosts.map(({ id, date, title }) => (
                         <li key={id}>
                             <Link href={`/blog/${id}`} as={`/blog/${id}.html`}>
-                                <a>{title}</a>
+                                <a data-post-link>{title}</a>
                             </Link>
                             <br />
                         </li>

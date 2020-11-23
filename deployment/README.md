@@ -1,6 +1,7 @@
 How to deploy:
 
 Requirements:
+    * Run `yarn build` to create assets
     * `deployment/deploy.env` file to export FTP info as environment variables
     * Docker
 

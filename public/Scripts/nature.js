@@ -7,19 +7,23 @@
 var env = new Env();
 
 setTimeout(function () {
-    env = new Env();
+    try {
+        env = new Env();
 
-    env.frame++;
-    env.canvas = document.getElementById("canvas-nature");
-    env.canvas.width = window.innerWidth;
-    env.canvas.height = window.innerHeight * 0.7;
+        env.frame++;
+        env.canvas = document.getElementById("canvas-nature");
+        env.canvas.width = window.innerWidth;
+        env.canvas.height = window.innerHeight * 0.7;
 
-    env.rightBound = env.canvas.width;
-    env.bottomBound = env.canvas.height - env.groundLevel;
+        env.rightBound = env.canvas.width;
+        env.bottomBound = env.canvas.height - env.groundLevel;
 
-    addBug();
+        addBug();
 
-    draw();
+        draw();
+    } catch (error) {
+        console.info("Bug application died, error:", error);
+    }
 }, 500);
 
 function draw() {
