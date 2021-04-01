@@ -12,9 +12,6 @@ export default function Post({ postData }) {
     return (
         <>
             <Head>
-                <link rel="stylesheet"
-                    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/default.min.css" />
-                <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/highlight.min.js"></script>
                 <title>{postData.title}</title>
             </Head>
             <div className="flex-center">

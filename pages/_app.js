@@ -12,6 +12,9 @@ function MyApp({ Component, pageProps }) {
                 <link rel="icon" href="/favicon.ico" />
                 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
                 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111893401-1"></script>
+                <link rel="stylesheet"
+                    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/default.min.css" />
+                <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/highlight.min.js"></script>
                 <script
                     dangerouslySetInnerHTML={{
                         __html: `

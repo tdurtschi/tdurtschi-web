@@ -34,6 +34,34 @@ export function getSortedPosts() {
     })
 }
 
+function getPreview(fileContents, previewLength) {
+    let preview = fileContents
+        .substr(0, previewLength)
+    preview = preview.substr(0, preview.lastIndexOf(" "));
+    return preview + "...";
+}
+
+export async function getPostPreviewData(idOrName) {
+    const id = idOrName.replace(/\.md$/, '')
+    const fullPath = path.join(postsDirectory, `${id}.md`)
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+
+    // Use gray-matter to parse the post metadata section
+    const matterResult = matter(fileContents)
+    // Use remark to convert markdown into HTML string
+    const processedContent = await remark()
+        .use(html)
+        .process(getPreview(matterResult.content, matterResult.data.previewLength))
+    const contentHtml = processedContent.toString()
+
+    // Combine the data with the id and contentHtml
+    return {
+        id,
+        contentHtml,
+        ...matterResult.data
+    }
+}
+
 export async function getPostData(idOrName) {
     const id = idOrName.replace(/\.md$/, '')
     const fullPath = path.join(postsDirectory, `${id}.md`)

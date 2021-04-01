@@ -108,3 +108,6 @@ dist
 .tern-port
 
 out/
+
+cypress/screenshots/
+cypress/videos/

@@ -1,17 +1,17 @@
 ---
 title: "Destructuring Assignment in Javascript"
 date: "2020-11-11"
+previewLength: 785
 ---
-
-## What is Destructuring Assignment?
 
 Destructuring is a special syntax in javascript. It allows you to initialize local variables or function arguments and assign them to values inside of an object. 
 
 Here's a quick example:
 
 ```typescript
-// declare a local variable 'foo':
 const obj = { foo: "woof", bar: 0 }
+
+// declare a local variable 'foo':
 const { foo } = obj
 
 console.log(foo) // prints "woof"

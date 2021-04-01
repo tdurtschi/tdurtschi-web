@@ -1,11 +1,8 @@
 import styles from "../../styles/Blog.module.scss"
 
 export function PostHeader({ postData }) {
-    const router = useRouter();
-
     return (
         <>
-            <h1 className={styles["post-title"]}>{postData.title}</h1>
             <div className={styles["post-header"]}>
                 <p>
                     <button className="link" onClick={() => window.history.back()}>{"<- go back"}</button>
@@ -29,6 +26,7 @@ export default function BlogPost({ postData }) {
         <div className="container">
             <PostHeader postData={postData} />
             <hr />
+            <h1 className={styles["post-title"]}>{postData.title}</h1>
             <PostBody postData={postData} />
         </div>
     )
