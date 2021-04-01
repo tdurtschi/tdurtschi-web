@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { useEffect } from 'react'
 import { getAllPostIds, getPostData } from '../../helpers/posts'
 import styles from "../../styles/Blog.module.scss"
+import BlogPost from "../../components/blog/blogPost"
 
 export default function Post({ postData }) {
     useEffect(() => {
@@ -18,21 +19,7 @@ export default function Post({ postData }) {
             </Head>
             <div className="flex-center">
                 <div className={styles["post-container"]}>
-                    <div className="container">
-                        <h1 className={styles["post-title"]}>{postData.title}</h1>
-                        <div className={styles["post-header"]}>
-                            <p>
-                                <button className="link" onClick={() => window.history.back()}>{"<- go back"}</button>
-                            </p>
-                            <div className={styles["post-date"]}>
-                                {postData.date}
-                            </div>
-                        </div>
-                        <hr />
-                        <article>
-                            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-                        </article>
-                    </div>
+                    <BlogPost postData={postData}></BlogPost>
                 </div>
             </div>
         </>
