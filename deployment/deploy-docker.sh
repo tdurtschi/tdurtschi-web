@@ -12,5 +12,5 @@ run_deploy_from_docker() {
 
 cd $PROJECT_ROOT
 yarn build
-yarn cypress
+yarn e2e
 run_deploy_from_docker
