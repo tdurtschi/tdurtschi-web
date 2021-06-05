@@ -1,39 +1,44 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.scss'
-import Footer from "../components/footer/footer"
-import Link from "next/link"
+
 import { useEffect } from 'react'
+import Footer from "../components/footer/footer"
+import styles from '../styles/Bug.module.scss'
 
-export default function Home() {
+export default function Bug() {
     useEffect(() => {
-        window.PAUSE = false
+        const { Game } = require("@tdurtschi/bug");
+        window.b = Game("#root");
+        b.game.start();
 
-        return () => {
-            window.PAUSE = true
+        window.addBug = function () {
+            var bug = b.bugFactory.build();
+            b.game.addEntity(bug);
         }
-    })
+
+        window.addPlant = function () {
+            var plant = b.plantFactory.build();
+            b.game.addEntity(plant);
+        }
+
+        addBug();
+        addBug();
+        addBug();
+        setTimeout(() => {
+            addPlant();
+            addPlant();
+            addPlant();
+        }, 1000);
+    }, [])
 
     return (
         <>
-            <Head>
-                <script type="text/javascript" src="/Scripts/util.js"></script>
-                <script type="text/javascript" src="/Scripts/Environment.js"></script>
-                <script type="text/javascript" src="/Scripts/Bug.js"></script>
-                <script type="text/javascript" src="/Scripts/Grass.js"></script>
-            </Head>
-            <div className="container body-content">
-                <div className={styles["earth"]}></div>
-                <canvas className={styles["canvas-nature"]} id="canvas-nature"> </canvas>
-                <script type="text/javascript" src="/Scripts/nature.js"></script>
-            </div>
+            <div id="root" className={styles.root} />
+            <div className={styles.earth} />
             <Footer>
                 <p>
-                    Last updated May 2020 <br />
+                    Last updated June 2021 <br />
                     <a onClick={() => window.addBug()} href="#">Add Bug</a>
                     <span>|</span>
-                    <Link href="/bug" as="/bug.html">
-                        <a>Bug 2.0</a>
-                    </Link>
+                    <a onClick={() => window.addPlant()} href="#">Add Plant</a>
                 </p>
             </Footer>
         </>
