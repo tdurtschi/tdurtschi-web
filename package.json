@@ -23,7 +23,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "gray-matter": "^4.0.2",
-    "next": "9.5.2",
+    "next": "9.5.4",
     "next-images": "^1.5.0",
     "node-sass": "^4.14.1",
     "nodemon": "^2.0.3",
