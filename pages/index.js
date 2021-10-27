@@ -18,15 +18,25 @@ export default function Bug() {
             var plant = b.plantFactory.build();
             b.game.addEntity(plant);
         }
+        console.log(b.game.entityManager);
+        if(b.game.entityManager.getEntities().length <3 ){
+            function* newEntityGen() {
+                yield addBug();
+                yield addBug();
+                yield addPlant();
+                yield addBug();
+                yield addPlant();
+                yield addPlant();
+            }
+            const newEntity = newEntityGen();
 
-        addBug();
-        addBug();
-        addBug();
-        setTimeout(() => {
-            addPlant();
-            addPlant();
-            addPlant();
-        }, 1000);
+            setTimeout(() => newEntity.next(), 500);
+            setTimeout(() => newEntity.next(), 1000);
+            setTimeout(() => newEntity.next(), 1500);
+            setTimeout(() => newEntity.next(), 2000);
+            setTimeout(() => newEntity.next(), 2500);
+            setTimeout(() => newEntity.next(), 3000);
+        }
     }, [])
 
     return (

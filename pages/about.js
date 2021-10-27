@@ -14,19 +14,14 @@ export default function About() {
         <p>This website is built with Next.js.&nbsp;
           <a href={githubUrl}>It's open source!</a>
         </p>
-        <h2>Projects</h2>
-        <p>
-        <Link href="/oldBug" as="/oldBug.html">
-            <a>- Old Bug</a>
-        </Link>
-        </p>
+        <h2>Other Projects</h2>
         <p>
         <a href="//tdurtschi.com/block-game">- Block Game</a>
         </p>
         <h2>Contact Info</h2>
         <p className={styles.contact}>
           <strong>Email: </strong>
-          <a href="mailto:teagan@teaganmatthewdurtschi.com">
+          <a href="mailto:teagan@tdurtschi.com">
             teagan@tdurtschi.com
           </a>
         </p>
