@@ -11,19 +11,21 @@ export default function About() {
         <p>
           This is the personal website for Teagan Durtschi, software engineer.{" "}
         </p>
-        <p>This website is built with Next.js.&nbsp;
+        <p>
+          This website is built with Next.js.&nbsp;
           <a href={githubUrl}>It's open source!</a>
         </p>
         <h2>Other Projects</h2>
         <p>
-        <a href="//tdurtschi.com/block-game">- Block Game</a>
+          <a href="//tdurtschi.com/block-game">- Block Game</a>
+        </p>
+        <p>
+          <a href="https://tdurtschi.github.io/reg-express/">- Reg Express</a>
         </p>
         <h2>Contact Info</h2>
         <p className={styles.contact}>
           <strong>Email: </strong>
-          <a href="mailto:teagan@tdurtschi.com">
-            teagan@tdurtschi.com
-          </a>
+          <a href="mailto:teagan@tdurtschi.com">teagan@tdurtschi.com</a>
         </p>
         <p className={styles.contact}>
           <strong>GitHub: </strong>
