@@ -8,18 +8,18 @@ export default function Bug() {
         const { Game } = require("@tdurtschi/bug");
         window.b = Game("#root");
         b.game.start();
-
+        console.log(b);
         window.addBug = function () {
-            var bug = b.bugFactory.build();
-            b.game.addEntity(bug);
+            var bug = b.game.bugFactory.build();
+            b.game.entityManager.addEntity(bug);
         }
 
         window.addPlant = function () {
-            var plant = b.plantFactory.build();
-            b.game.addEntity(plant);
+            var plant = b.game.plantFactory.build();
+            b.game.entityManager.addEntity(plant);
         }
         console.log(b.game.entityManager);
-        if(b.game.entityManager.getEntities().length <3 ){
+        if (b.game.entityManager.getEntities().length < 3) {
             function* newEntityGen() {
                 yield addBug();
                 yield addBug();
