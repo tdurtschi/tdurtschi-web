@@ -9,18 +9,21 @@ export default function About() {
       <div className="container">
         <h2>About This Site</h2>
         <p>
-          This is the personal website for Teagan Durtschi, software engineer.{" "}
+          Welcome to my website! I'm Teagan Durtschi, and I make software for fun & profit.{" "}
         </p>
         <p>
           This website is built with Next.js.&nbsp;
           <a href={githubUrl}>It's open source!</a>
         </p>
-        <h2>Other Projects</h2>
+        <h2>Project Gallery</h2>
         <p>
           <a href="//tdurtschi.com/block-game">- Block Game</a>
         </p>
         <p>
-          <a href="https://tdurtschi.github.io/reg-express/">- Reg Express</a>
+          <a href="https://www.gregorymathieu.com/">- Gregory Mathieu Portfolio</a>
+        </p>
+        <p>
+          <a href="https://github.com/vmware-tanzu-labs/git-story">- git-story (contributor)</a> 
         </p>
         <h2>Contact Info</h2>
         <p className={styles.contact}>
@@ -41,7 +44,7 @@ export default function About() {
         </p>
       </div>
       <Footer>
-        <p>Last Updated June 2021</p>
+        <p>Last update: Nov 2022</p>
       </Footer>
     </>
   );

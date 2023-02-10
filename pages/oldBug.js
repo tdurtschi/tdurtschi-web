@@ -27,7 +27,7 @@ export default function OldBug() {
             </div>
             <Footer>
                 <p>
-                    Last updated June 2021 <br />
+                    Last update: Feb 2023 <br />
                     <a onClick={() => window.addBug()} href="#">Add Bug</a>
                     <span>|</span>
                     <a href="/">Home</a>

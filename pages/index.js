@@ -10,13 +10,11 @@ export default function Bug() {
         b.game.start();
 
         window.addBug = function () {
-            var bug = b.bugFactory.build();
-            b.game.addEntity(bug);
+            b.game.addBug();
         }
 
         window.addPlant = function () {
-            var plant = b.plantFactory.build();
-            b.game.addEntity(plant);
+            b.game.addPlant();
         }
         console.log(b.game.entityManager);
         if(b.game.entityManager.getEntities().length <3 ){
@@ -25,8 +23,6 @@ export default function Bug() {
                 yield addBug();
                 yield addPlant();
                 yield addBug();
-                yield addPlant();
-                yield addPlant();
             }
             const newEntity = newEntityGen();
 
@@ -34,8 +30,6 @@ export default function Bug() {
             setTimeout(() => newEntity.next(), 1000);
             setTimeout(() => newEntity.next(), 1500);
             setTimeout(() => newEntity.next(), 2000);
-            setTimeout(() => newEntity.next(), 2500);
-            setTimeout(() => newEntity.next(), 3000);
         }
     }, [])
 
@@ -45,10 +39,9 @@ export default function Bug() {
             <div className={styles.earth} />
             <Footer>
                 <p>
-                    Last updated June 2021 <br />
                     <a onClick={() => window.addBug()} href="#">Add Bug</a>
                     <span>|</span>
-                    <a onClick={() => window.addPlant()} href="#">Add Plant</a>
+                    Last update: Feb 2023 
                 </p>
             </Footer>
         </>
