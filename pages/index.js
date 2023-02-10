@@ -40,8 +40,6 @@ export default function Bug() {
             <Footer>
                 <p>
                     <a onClick={() => window.addBug()} href="#">Add Bug</a>
-                    <span>|</span>
-                    Last update: Feb 2023 
                 </p>
             </Footer>
         </>

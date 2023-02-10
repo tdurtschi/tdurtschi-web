@@ -1,15 +1,13 @@
 import styles from "../styles/About.module.scss";
-import Footer from "../components/footer/footer";
-import Link from "next/link";
 const githubUrl = "https://github.com/tdurtschi/tdurtschi-web";
 
 export default function About() {
   return (
     <>
-      <div className="container">
-        <h2>About This Site</h2>
+      <div className="container about">
+        <h2>About</h2>
         <p>
-          Welcome to my website! I'm Teagan Durtschi, and I make software for fun & profit.{" "}
+          My name is Teagan Durtschi. Here, you can see some of the software projects I've been working on. Thanks for visiting!
         </p>
         <p>
           This website is built with Next.js.&nbsp;
@@ -42,10 +40,9 @@ export default function About() {
             https://www.linkedin.com/in/teagandurtschi/
           </a>
         </p>
+        <br/>
+        <p>Last update: Feb 2023</p>
       </div>
-      <Footer>
-        <p>Last update: Nov 2022</p>
-      </Footer>
     </>
   );
 }
