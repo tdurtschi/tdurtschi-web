@@ -21,6 +21,9 @@ export default function About() {
           <a href="https://www.gregorymathieu.com/">- Gregory Mathieu Portfolio</a>
         </p>
         <p>
+          <a href="https://tdurtschi.github.io/rocksolid-archived/">- Rock Solid Landscaping (archived)</a>
+        </p>
+        <p>
           <a href="https://github.com/vmware-tanzu-labs/git-story">- git-story (contributor)</a> 
         </p>
         <h2>Contact Info</h2>
