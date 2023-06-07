@@ -1177,10 +1177,10 @@
   dependencies:
     "defer-to-connect" "^1.0.1"
 
-"@tdurtschi/bug@^1.0.8":
-  "integrity" "sha512-xPz/8Jtx/YzBPoiLMjPkTDTYqJ/33T0/ex6RRZttkmWyDlKRapuPwXkNFcuEcTq25iAxb8jBS8tHRsS0KeHJaw=="
-  "resolved" "https://registry.npmjs.org/@tdurtschi/bug/-/bug-1.0.8.tgz"
-  "version" "1.0.8"
+"@tdurtschi/bug@^1.0.9":
+  "integrity" "sha512-pPxlBH1gv6VVYjJI0FLurD2q/xJG58AUakPSUV7tsOM5o8ygDFsk/Ap/mYTUUJ1YTPaL0fRekj6SPje4ojZ/pg=="
+  "resolved" "https://registry.npmjs.org/@tdurtschi/bug/-/bug-1.0.9.tgz"
+  "version" "1.0.9"
   dependencies:
     "@testing-library/react" "^8.0.7"
     "@types/jasmine" "^3.3.13"
