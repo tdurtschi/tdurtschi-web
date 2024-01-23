@@ -13,19 +13,20 @@ export default function About() {
           This website is built with Next.js.&nbsp;
           <a href={githubUrl}>It's open source!</a>
         </p>
-        <h2>Project Gallery</h2>
+        <h2>Personal Projects</h2>
         <p>
           <a href="//tdurtschi.com/block-game">- Block Game</a>
         </p>
         <p>
-          <a href="https://www.gregorymathieu.com/">- Gregory Mathieu Portfolio</a>
-        </p>
-        <p>
-          <a href="https://tdurtschi.github.io/rocksolid-archived/">- Rock Solid Landscaping (archived)</a>
+          <a href="https://github.com/tdurtschi/bug">- Bug</a>
         </p>
         <p>
           <a href="https://github.com/vmware-tanzu-labs/git-story">- git-story (contributor)</a> 
         </p>
+        <h2>Business</h2>
+          <p>For professional inquiries, please visit&nbsp;
+            <a href="https://lakewingrasoftware.azureedge.net">Lake Wingra Software</a>
+          </p>
         <h2>Contact Info</h2>
         <p className={styles.contact}>
           <strong>Email: </strong>
@@ -44,7 +45,7 @@ export default function About() {
           </a>
         </p>
         <br/>
-        <p>Last update: Feb 2023</p>
+        <p>Last update: June 2023</p>
       </div>
     </>
   );
