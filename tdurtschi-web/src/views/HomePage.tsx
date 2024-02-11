@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from "react";
+import { useEffect } from "react";
 import Footer from "../Footer";
 import "./HomePage.css";
 import { Game } from "@tdurtschi/bug";
@@ -14,7 +14,14 @@ declare global {
   }
 }
 
-export default function Bug() {
+function* newEntityGen() {
+  yield window.addBug();
+  yield window.addBug();
+  yield window.addPlant();
+  yield window.addBug();
+}
+
+export default function HomePage() {
   useEffect(() => {
     window.b = Game("#game-root");
     window.b.game.start();
@@ -28,12 +35,6 @@ export default function Bug() {
     };
 
     if (window.b.game.entityManager.getEntities().length < 3) {
-      function* newEntityGen() {
-        yield window.addBug();
-        yield window.addBug();
-        yield window.addPlant();
-        yield window.addBug();
-      }
       const newEntity = newEntityGen();
 
       setTimeout(() => newEntity.next(), 500);
