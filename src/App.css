@@ -1,0 +1,67 @@
+body {
+  font-size: 16px;
+  margin: 0;
+  color: #031d1d;
+  background-color: #f4f7f9;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+a {
+  color: #0a6868;
+  text-decoration: none;
+
+  &:hover {
+    color: #1fc3c3;
+  }
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.link {
+  font-size: 16px;
+  font-family: "IBM Plex Mono", monospace;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #0a6868;
+  text-decoration: none;
+
+  &:hover {
+    color: #1fc3c3;
+  }
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px 16px;
+
+  p {
+    word-wrap: break-word;
+  }
+}
+
+.flex-center{
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &-column{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

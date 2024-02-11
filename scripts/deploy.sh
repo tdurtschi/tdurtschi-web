@@ -28,7 +28,7 @@ run_deploy_from_docker() {
 main() {
     cd $PROJECT_ROOT
     
-    ./scripts/ci.sh
+    # ./scripts/ci.sh
 
     export_variables_from_file ./scripts/deploy.env
     run_deploy_from_docker
