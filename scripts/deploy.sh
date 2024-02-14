@@ -4,9 +4,13 @@ set -e
 PROJECT_ROOT="$( cd "$(dirname "${BASH_SOURCE[0]}")" ; cd .. ; pwd -P )"
 
 export_variables_from_file() {
-    if [ ! -f $PROJECT_ROOT/scripts/deploy.env ]; then
+    if [ -f $1 ]; then
+        echo "loading env file $1"
+    fi
+
+    if [ ! -f $1 ]; then
         echo "😭 ERROR!"
-        echo "🔴 File 'deploy.env' does not exist in directory $PROJECT_ROOT/scripts"
+        echo "🔴 File $1 does not exist in directory $PROJECT_ROOT/scripts"
         echo ""
         exit 1
     fi
@@ -16,13 +20,11 @@ export_variables_from_file() {
     set +o allexport
 }
 
-run_deploy_from_docker() {
-    docker run -it --rm \
-        -v $PROJECT_ROOT:$PROJECT_TARGET_DIR \
-        -w=$PROJECT_TARGET_DIR \
-        --env-file=$PROJECT_ROOT/scripts/deploy.env \
-        frolvlad/alpine-bash \
-        /bin/bash $PROJECT_TARGET_DIR/scripts/docker/deploy-docker.sh
+upload_static_site() {
+    az storage blob upload-batch --account-name $AZ_STORAGE_ACCT_NAME \
+        --overwrite --auth-mode key \
+        -d '$web' \
+        -s $SRC_DIR
 }
 
 main() {
@@ -31,7 +33,7 @@ main() {
     # ./scripts/ci.sh
 
     export_variables_from_file ./scripts/deploy.env
-    run_deploy_from_docker
+    upload_static_site
 }
 
 main

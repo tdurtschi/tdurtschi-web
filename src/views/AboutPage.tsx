@@ -16,7 +16,7 @@ export default function About() {
         </p>
         <h2>Personal Projects</h2>
         <p>
-          <a href="//tdurtschi.com/block-game">- Block Game</a>
+          <a href="https://tdurtschi.github.io/block-game/">- Block Game</a>
         </p>
         <p>
           <a href="https://github.com/tdurtschi/bug">- Bug</a>
